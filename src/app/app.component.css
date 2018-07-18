@@ -1,0 +1,13 @@
+/*
+input[name="password"] {
+  background-color: yellow;
+}
+*/
+
+header {
+  background: url('https://picsum.photos/2000/400?image=192') no-repeat top;
+}
+
+h6 {
+  color: #52a6eb;
+}
