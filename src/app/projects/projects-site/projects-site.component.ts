@@ -16,8 +16,13 @@ export class ProjectsSiteComponent implements OnInit {
     this.projectsService
       .getAllProjects()
       .subscribe((project: Project[]) => {
-        this.projectList = project;
+        console.log('Twoje projekty', project);
+        this.projectList = [...project];
       });
+
+
+    // console.log(this.projectsService.getAllProjects())
+
     console.log('ProjectsSiteComponent ngOnInit');
   }
 

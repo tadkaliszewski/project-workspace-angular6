@@ -34,6 +34,13 @@
       "description": "Opis mojego projektu 5",
       "imgUrl": "https://picsum.photos/200/200?image=32",
       "likedBy": 12311
+    },
+    {
+      "id": 5,
+      "title": "Mój 6 projekt",
+      "description": "Opis mojego projektu 6",
+      "imgUrl": "https://picsum.photos/200/200?image=232",
+      "likedBy": 78354
     }
   ]
 }
