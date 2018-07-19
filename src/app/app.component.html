@@ -5,11 +5,12 @@
 
 <div class="container">
 
-  <pw-main-menu (menuChange)="chosenSite = $event"></pw-main-menu>
+  <pw-main-menu></pw-main-menu>
 
   <main style="padding: 10px">
 
-    <ng-container [ngSwitch]="chosenSite">
+    <router-outlet></router-outlet>
+    <!--<ng-container [ngSwitch]="chosenSite">
       <ng-container *ngSwitchCase="'projects'">
         <pw-projects-site></pw-projects-site>
       </ng-container>
@@ -22,7 +23,7 @@
       <ng-container *ngSwitchDefault>
         <span>404 !</span>
       </ng-container>
-    </ng-container>
+    </ng-container>-->
 
 
 

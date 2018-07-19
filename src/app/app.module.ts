@@ -1,10 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Route, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ProjectsModule } from './projects/projects.module';
-import { BlogModule } from './blog/blog.module';
 import { MainMenuComponent } from './main-menu/main-menu.component';
+import { ProjectsSiteComponent } from './projects/projects-site/projects-site.component';
+import { Top10SiteComponent } from './projects/top10-site/top10-site.component';
+
+const routes: Route[] = [
+  { path: '', redirectTo: 'projects', pathMatch: 'full' },
+  { path: 'projects', component: ProjectsSiteComponent },
+  { path: 'top-ten', component: Top10SiteComponent },
+  { path: 'blogs', loadChildren: './blog/blog.module#BlogModule' },
+  // { path: '**', component: /* TODO: make a NotFoundSiteComponent */ },
+];
 
 @NgModule({
   declarations: [
@@ -14,7 +24,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
   imports: [
     BrowserModule,
     ProjectsModule,
-    BlogModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
