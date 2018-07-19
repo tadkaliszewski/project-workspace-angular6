@@ -1,3 +1,27 @@
-<p>
-  project-list works!
-</p>
+<div class="row">
+  <div class="col-8"></div>
+  <div class="col-4">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fa fa-search"></i></span>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search for projects..." />
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-4" *ngFor="let project of projectList">
+    <div class="card">
+      <div class="card-header">{{project.title}}</div>
+      <img class="card-img" [src]="project.imgUrl" />
+      <div class="card-body">
+        {{project.description}}
+      </div>
+      <div class="card-footer">Liked by: <b>{{project.likedBy}}</b></div>
+    </div>
+  </div>
+</div>

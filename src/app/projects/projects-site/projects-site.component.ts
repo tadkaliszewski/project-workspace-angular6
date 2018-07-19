@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Project} from '../Project';
+import {ProjectsService} from '../projects.service';
 
 @Component({
   selector: 'pw-projects-site',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsSiteComponent implements OnInit {
 
-  constructor() { }
+  projectList: Project[] = [];
+  constructor(private projectsService: ProjectsService) {}
 
   ngOnInit() {
+    this.projectList = this.projectsService.getAllProjects();
     console.log('ProjectsSiteComponent ngOnInit');
   }
 
