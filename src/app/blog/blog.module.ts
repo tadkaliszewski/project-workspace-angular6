@@ -6,6 +6,7 @@ import { BlogsSiteComponent } from './blogs-site/blogs-site.component';
   imports: [
     CommonModule
   ],
-  declarations: [BlogsSiteComponent]
+  declarations: [BlogsSiteComponent],
+  exports: [BlogsSiteComponent]
 })
 export class BlogModule { }

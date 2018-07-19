@@ -1,11 +1,6 @@
 import {Component} from '@angular/core';
 
-type MenuType = 'projects' | 'top-ten' | 'blogs';
-
-interface MenuItem {
-  type: MenuType;
-  title: string;
-}
+import { MenuType } from './main-menu/main-menu.component';
 
 @Component({
   selector: 'pw-root' ,
@@ -16,14 +11,5 @@ export class AppComponent {
 
   title = 'Project Workspace';
 
-  menuItems: MenuItem[] = [
-    { title: 'Projects', type: 'projects'},
-    { title: 'Top 10', type: 'top-ten'},
-    { title: 'Technical Blog', type: 'blogs'}
-  ];
   chosenSite: MenuType = 'blogs';
-
-  handleMenuClick(site: MenuType) {
-    this.chosenSite = site;
-  }
 }

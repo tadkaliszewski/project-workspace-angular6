@@ -10,6 +10,7 @@ export class ProjectsSiteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('ProjectsSiteComponent ngOnInit');
   }
 
 }
