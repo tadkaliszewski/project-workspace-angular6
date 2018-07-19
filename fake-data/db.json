@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "title": "Mój piewszy projekt",
+      "description": "Opis mojego projektu",
+      "imgUrl": "https://picsum.photos/200/200?image=68",
+      "likedBy": 10283
+    },
+    {
+      "id": 1,
+      "title": "Mój 2 projekt",
+      "description": "Opis mojego projektu 2",
+      "imgUrl": "https://picsum.photos/200/200?image=123",
+      "likedBy": 10283
+    },
+    {
+      "id": 2,
+      "title": "Mój 3 projekt",
+      "description": "Opis mojego projektu 3",
+      "imgUrl": "https://picsum.photos/200/200?image=231",
+      "likedBy": 10283
+    },
+    {
+      "id": 3,
+      "title": "Mój 4 projekt",
+      "description": "Opis mojego projektu 4",
+      "imgUrl": "https://picsum.photos/200/200?image=1",
+      "likedBy": 10283
+    },
+    {
+      "id": 4,
+      "title": "Mój 5 projekt",
+      "description": "Opis mojego projektu 5",
+      "imgUrl": "https://picsum.photos/200/200?image=32",
+      "likedBy": 12311
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import { ProjectsModule } from './projects/projects.module';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { ProjectsSiteComponent } from './projects/projects-site/projects-site.component';
 import { Top10SiteComponent } from './projects/top10-site/top10-site.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Route[] = [
   { path: '', redirectTo: 'projects', pathMatch: 'full' },
@@ -24,7 +25,8 @@ const routes: Route[] = [
   imports: [
     BrowserModule,
     ProjectsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,7 +13,11 @@ export class ProjectsSiteComponent implements OnInit {
   constructor(private projectsService: ProjectsService) {}
 
   ngOnInit() {
-    this.projectList = this.projectsService.getAllProjects();
+    this.projectsService
+      .getAllProjects()
+      .subscribe((project: Project[]) => {
+        this.projectList = project;
+      });
     console.log('ProjectsSiteComponent ngOnInit');
   }
 
