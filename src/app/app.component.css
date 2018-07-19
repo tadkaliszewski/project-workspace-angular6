@@ -5,9 +5,16 @@ input[name="password"] {
 */
 
 header {
-  background: url('https://picsum.photos/2000/400?image=192') no-repeat top;
+  background: url('https://picsum.photos/2000/400?image=1') no-repeat top;
+  padding-top: 3rem;
+}
+
+h1 {
+  color: white;
+  text-shadow: 3px 3px 2px #000000;
 }
 
 h6 {
-  color: #52a6eb;
+  color: #9bf9b6;
+  text-shadow: 2px 2px 1px #27167f;
 }
