@@ -8,13 +8,20 @@
       <input
         type="text"
         class="form-control"
+        [(ngModel)]="searchTerm"
         placeholder="Search for projects..." />
     </div>
   </div>
 </div>
 
+<!--
+{{ nowDate | date:'yyyy-MM-dd'}}
+
+{{ projectList | projectFilter:searchTerm | json }}
+-->
+
 <div class="row">
-  <div class="col-4" *ngFor="let project of projectList">
+  <div class="col-4" *ngFor="let project of projectList | projectFilter:searchTerm">
     <div class="card">
       <div class="card-header">{{project.title}}</div>
       <img class="card-img" [src]="project.imgUrl" />

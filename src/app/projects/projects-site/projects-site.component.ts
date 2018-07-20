@@ -9,6 +9,8 @@ import {ProjectsService} from '../projects.service';
 })
 export class ProjectsSiteComponent implements OnInit {
 
+  searchTerm = '';
+  // nowDate = new Date();
   projectList: Project[] = [];
   constructor(private projectsService: ProjectsService) {}
 
@@ -19,10 +21,6 @@ export class ProjectsSiteComponent implements OnInit {
         console.log('Twoje projekty', project);
         this.projectList = [...project];
       });
-
-
-    // console.log(this.projectsService.getAllProjects())
-
     console.log('ProjectsSiteComponent ngOnInit');
   }
 

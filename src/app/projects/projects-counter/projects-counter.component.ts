@@ -8,6 +8,7 @@ import {ProjectsService} from '../projects.service';
 export class ProjectsCounterComponent implements OnInit {
 
   projectCount = 0;
+  // projectCountStream = this.projectService.getAllProjectCount();
 
   constructor(private projectService: ProjectsService) { }
 
