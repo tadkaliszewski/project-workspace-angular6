@@ -9,6 +9,7 @@ import { ProjectsSiteComponent } from './projects/projects-site/projects-site.co
 import { Top10SiteComponent } from './projects/top10-site/top10-site.component';
 import { HttpClientModule } from '@angular/common/http';
 import {AddProjectSiteComponent} from './projects/add-project-site/add-project-site.component';
+import { HighlightDirective } from './highlight.directive';
 
 const routes: Route[] = [
   { path: '', redirectTo: 'projects', pathMatch: 'full' },
@@ -22,7 +23,8 @@ const routes: Route[] = [
 @NgModule({
   declarations: [
     AppComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

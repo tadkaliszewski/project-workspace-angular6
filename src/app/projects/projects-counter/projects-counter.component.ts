@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostBinding, HostListener, OnInit} from '@angular/core';
 import {ProjectsService} from '../projects.service';
 
 @Component({
@@ -6,6 +6,8 @@ import {ProjectsService} from '../projects.service';
   template: '<span *ngIf="projectCount">Currently we got {{projectCount}} projects !</span>',
 })
 export class ProjectsCounterComponent implements OnInit {
+
+  @HostBinding('style.color') color;
 
   projectCount = 0;
   // projectCountStream = this.projectService.getAllProjectCount();
@@ -18,6 +20,12 @@ export class ProjectsCounterComponent implements OnInit {
       .subscribe((noOfProj: number) => {
           this.projectCount = noOfProj;
       });
+  }
+
+  @HostListener('mouseover')
+  mouseOver() {
+    this.color = '#FF0000';
+    console.log('Hello mouseover');
   }
 
 }
