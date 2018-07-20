@@ -54,6 +54,10 @@
         </select>
       </div>
 
+      <div *ngIf="httpError" class="alert alert-danger">
+          {{httpError}}
+      </div>
+
       <button
         class="btn btn-primary"
         type="submit"
