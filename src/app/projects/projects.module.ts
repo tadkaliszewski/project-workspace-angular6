@@ -7,11 +7,13 @@ import { ProjectsCounterComponent } from './projects-counter/projects-counter.co
 import { AddProjectSiteComponent } from './add-project-site/add-project-site.component';
 import { FormsModule } from '@angular/forms';
 import { ProjectFilterPipe } from './project-filter.pipe';
+import { ProjectsRoutingModule } from './projects-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ProjectsRoutingModule
   ],
   declarations: [
     ProjectsSiteComponent,
@@ -21,8 +23,6 @@ import { ProjectFilterPipe } from './project-filter.pipe';
     ProjectFilterPipe
   ],
   exports: [
-    ProjectsSiteComponent,
-    Top10SiteComponent,
     ProjectsCounterComponent
   ]
 })

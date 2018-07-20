@@ -65,6 +65,14 @@
       "industry": "Social",
       "imgUrl": "https://picsum.photos/200/200?image=256",
       "id": 8
+    },
+    {
+      "likedBy": 0,
+      "title": "Mój super nowy projekt",
+      "description": "W tym projekcie jestem .....",
+      "industry": "Science",
+      "imgUrl": "https://picsum.photos/200/200?image=20",
+      "id": 9
     }
   ]
 }

@@ -1,3 +1,14 @@
-<p>
-  blogs-site works!
-</p>
+<div class="row">
+  <div class="col-4">
+    <ul class="list-group">
+      <li routerLink="12" class="list-group-item">Cras justo odio</li>
+      <li [routerLink]="[13]" class="list-group-item">Dapibus ac facilisis in</li>
+      <li [routerLink]="[14]" class="list-group-item">Morbi leo risus</li>
+      <li [routerLink]="[15]" class="list-group-item">Porta ac consectetur ac</li>
+      <li [routerLink]="[16]" class="list-group-item">Vestibulum at eros</li>
+    </ul>
+  </div>
+  <div class="col-8">
+      <router-outlet></router-outlet>
+  </div>
+</div>

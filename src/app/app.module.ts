@@ -5,17 +5,10 @@ import { Route, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ProjectsModule } from './projects/projects.module';
 import { MainMenuComponent } from './main-menu/main-menu.component';
-import { ProjectsSiteComponent } from './projects/projects-site/projects-site.component';
-import { Top10SiteComponent } from './projects/top10-site/top10-site.component';
 import { HttpClientModule } from '@angular/common/http';
-import {AddProjectSiteComponent} from './projects/add-project-site/add-project-site.component';
 import { HighlightDirective } from './highlight.directive';
 
 const routes: Route[] = [
-  { path: '', redirectTo: 'projects', pathMatch: 'full' },
-  { path: 'projects', component: ProjectsSiteComponent },
-  { path: 'top-ten', component: Top10SiteComponent },
-  { path: 'add-project', component: AddProjectSiteComponent },
   { path: 'blogs', loadChildren: './blog/blog.module#BlogModule' },
   // { path: '**', component: /* TODO: make a NotFoundSiteComponent */ },
 ];

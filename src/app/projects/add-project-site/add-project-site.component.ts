@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Project} from '../Project';
 import {NgForm} from '@angular/forms';
 import {ProjectsService} from '../projects.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'pw-add-project-site',
@@ -20,7 +21,11 @@ export class AddProjectSiteComponent implements OnInit {
 
   httpError = '';
 
-  constructor(private projectsService: ProjectsService) { }
+  constructor(
+    private projectsService: ProjectsService,
+    private router: Router/*,
+    private activatedRoute: ActivatedRoute*/
+  ) { }
 
   ngOnInit() {}
 
@@ -37,7 +42,8 @@ export class AddProjectSiteComponent implements OnInit {
         form.resetForm();
         this.model.imgUrl = '0';
         this.model.industry = '';
-        console.log(project);
+        // wroc do listy projektow bo jest OK!
+        this.router.navigate(['projects'], {} /*, {relativeTo: this.activatedRoute}*/);
       },
       (err: any) => {
           this.httpError = 'Connection lost... please try again';
