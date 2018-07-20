@@ -1,0 +1,63 @@
+<h2> Add new Project</h2>
+<div class="row">
+  <div class="col-6">
+    <img [ngStyle]="{width: '100%'}" [src]="'https://picsum.photos/600/400?image=' + model.imgUrl" />
+  </div>
+  <div class="col-6">
+    <form #myForm="ngForm" (ngSubmit)="handleSubmit(myForm)">
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-edit"></i></span>
+        </div>
+        <input
+          required
+          minlength="10"
+          type="text"
+          class="form-control"
+          [(ngModel)]="model.title"
+          #myTitle="ngModel"
+          name="title"
+          placeholder="Project title" />
+      </div>
+      <!--<div>{{myTitle.errors | json }}</div>-->
+      <div *ngIf="myTitle.invalid && !myTitle.pristine" class="alert alert-danger">
+        <span *ngIf="myTitle.errors['required']">Field is Required</span>
+        <span *ngIf="myTitle.errors['minlength']">Invalid length</span>
+      </div>
+      <div class="input-group mb-2">
+        <textarea
+          class="form-control"
+          rows="5"
+          [(ngModel)]="model.description"
+          name="description"
+          placeholder="Description..." ></textarea>
+      </div>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-image"></i></span>
+        </div>
+        <input
+          type="number"
+          min="0"
+          class="form-control"
+          [(ngModel)]="model.imgUrl"
+          name="imgUrl"
+          placeholder="Image Id" />
+      </div>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-industry"></i></span>
+        </div>
+        <select title="Industry" [(ngModel)]="model.industry" name="industry" class="form-control">
+          <option value="">Choose industry...</option>
+          <option *ngFor="let ind of ['IT', 'Social', 'Science']" [value]="ind">{{ind}}</option>
+        </select>
+      </div>
+
+      <button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="myForm.invalid || myForm.submitted"> Add project </button>
+    </form>
+  </div>
+</div>

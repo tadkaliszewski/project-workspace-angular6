@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Project } from './Project';
 import { HttpClient } from '@angular/common/http';
-import {BehaviorSubject, Observable, ReplaySubject} from 'rxjs';
+import {BehaviorSubject, Observable, of as observableOf, ReplaySubject} from 'rxjs';
+import {switchMap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -32,5 +33,16 @@ export class ProjectsService {
   getAllProjectCount(): Observable<number> {
     this.getProjectViaRest();
     return this.projectCountSubject.asObservable();
+  }
+
+  addNewProject(project: Project): Observable<Project> {
+    return this.httpClient
+      .post<Project>('http://localhost:3000/projects', project)
+      .pipe(
+        switchMap((value: Project) => {
+          this.getProjectViaRest();
+          return observableOf(value);
+        })
+      );
   }
 }

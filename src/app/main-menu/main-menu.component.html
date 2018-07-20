@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">PW</a>
   <button class="navbar-toggler" type="button" (click)="showMenu = !showMenu">
+  <!--<button class="navbar-toggler" type="button" (click)="handleShowMenu()">-->
     <span class="navbar-toggler-icon"></span>
   </button>
   <!--<div [ngClass]="{collapse: true, 'navbar-collapse': true, show: showMenu}" > -->
@@ -10,5 +11,8 @@
         <a class="nav-link" [routerLink]="item.type">{{item.title}}</a>
       </li>
     </ul>
+  </div>
+  <div>
+    <button class="btn btn-primary" routerLink="add-project"><i class="fa fa-plus"></i> Add new</button>
   </div>
 </nav>
